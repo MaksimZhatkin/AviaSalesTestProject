@@ -1,0 +1,5 @@
+node_modules
+.vscode
+public/main**
+public/img/**git
+bundle-report.html

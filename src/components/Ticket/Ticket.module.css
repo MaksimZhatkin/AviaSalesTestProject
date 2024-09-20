@@ -1,0 +1,104 @@
+.ticket {
+  margin: 20px 0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  transition: all 0.2s;
+}
+
+.ticket_price {
+  display: inline-block;
+  font-size: 24px;
+  color: #2196f3;
+  font-weight: 500;
+  flex-basis: 50%;
+}
+
+.airline_logo {
+  max-width: 110px;
+  height: auto;
+}
+
+.ticket_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flight_info {
+  color: #4a4a4a;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flight_route {
+  gap: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flight_route + .flight_route {
+  margin-block-start: 20px;
+}
+
+.flight_col {
+  max-width: 33.3%;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #4a4a4a;
+}
+
+.flight_col time {
+  text-transform: none;
+}
+
+.flight_title {
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #a0b0b9;
+}
+
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.ticket:focus-within {
+  outline: 2px solid #007bff;
+}
+
+.ticket:focus {
+  outline: none;
+}
+
+.ticket:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 4px;
+}
+
+.ticket:hover,
+.ticket:focus,
+.ticket:focus-visible {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}

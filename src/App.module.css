@@ -1,0 +1,17 @@
+.app_header {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 25px 0;
+  grid-area: header;
+  
+}
+
+.app_title {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+.app_content {
+  grid-area: cont;
+}

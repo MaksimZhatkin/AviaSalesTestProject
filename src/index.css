@@ -1,0 +1,41 @@
+/* Normalize */
+html {
+  font-family:
+    'Open Sans',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f3f7fa;
+  color: #4a4a4a;
+}
+
+body {
+  margin: 0;
+  padding-block-end: 50px;
+}
+
+/* Container */
+body > main {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-areas:
+    'header header header header'
+    'aside cont cont cont';
+  gap: 24px;
+  max-width: 755px;
+  margin: 0 auto;
+}
+
+/* Box Model */
+
+html {
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

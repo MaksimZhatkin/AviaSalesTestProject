@@ -1,0 +1,71 @@
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legend {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.radiogroup {
+  display: flex;
+  justify-content: space-around;
+}
+
+.choice {
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 167%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.1s;
+  background-color: #fff;
+  border: 1px solid #dfe5ec;
+  outline-offset: -3px;
+}
+
+.radio:checked + .choice {
+  background-color: #2196f3;
+  color: #ffffff;
+  border-color: #2196f3;
+}
+
+.radio:focus + .choice {
+  outline: 3px solid #0263cb;
+}
+
+.choice:hover {
+  background-color: #f1fcff;
+  border-color: #2196f3;
+}
+
+.choice:active {
+  background-color: #12548a;
+  color: #ffffff;
+}
+
+.choice + .choice {
+  border-left: none;
+  margin-left: -4px;
+}
+
+.choice:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+
+.choice:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+.radio {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
