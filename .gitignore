@@ -1,5 +1,6 @@
 node_modules
 .vscode
 public/main**
-public/img/**git
+public/vendors**
+public/img/**
 bundle-report.html
