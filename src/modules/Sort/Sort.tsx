@@ -1,16 +1,16 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setSort } from '../../store/sortSlice'; // Import the action
 import { RootState, AppDispatch } from '../../store/store'; // Import types from the store
 
-import * as css from './Sort.module.css';
+import { setSort } from './slice'; // Import the action
+import * as css from './styles.module.css';
 
 export default function Sort() {
   const dispatch: AppDispatch = useDispatch();
-  const sort = useSelector((state: RootState) => state.sort.sort);
+  const sort = useSelector((state: RootState) => state.sort.sortValue);
 
-  const handleActiveTab = (value: 'cheapest' | 'fastest' | 'optimal') => {
+  const toggleSortTab = (value: 'cheapest' | 'fastest' | 'optimal') => {
     dispatch(setSort(value));
   };
 
@@ -32,7 +32,7 @@ export default function Sort() {
               name="sort"
               value={value}
               checked={sort === value} // Ensure correct state is checked
-              onChange={() => handleActiveTab(value)} // Trigger action dispatch
+              onChange={() => toggleSortTab(value)} // Trigger action dispatch
             />
             <label className={css.choice} htmlFor={id}>
               {label}

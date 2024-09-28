@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Body from './components/Body/Body';
-import Sort from './components/Sort/Sort';
-import Aside from './components/Aside/Aside';
+import TicketsList from './modules/TicketsList/TicketsList';
+import Sort from './modules/Sort/Sort';
+import Aside from './modules/Filters/Filters';
 import * as css from './App.module.css';
 
 function App() {
@@ -10,12 +10,12 @@ function App() {
     <>
       <header className={css.app_header}>
         <h1 className={css.app_title}>Поиск билетов АвиаСейлс</h1>
-        <img src="img/Logo.svg" alt="Самолет на фоне земного шара" />
+        <img width="82" height="82" src="img/Logo.svg" alt="Самолет на фоне земного шара" />
       </header>
       <Aside />
       <section className={css.app_content}>
         <Sort />
-        <Body />
+        <TicketsList />
       </section>
     </>
   );

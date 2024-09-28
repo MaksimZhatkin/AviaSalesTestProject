@@ -1,0 +1,34 @@
+.loader {
+  display: inline-flex;
+  margin: 20px auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #2196f3;
+  box-shadow:
+    32px 0 #2196f3,
+    -32px 0 #2196f3;
+  position: relative;
+  animation: flash 0.5s ease-out infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    background-color: #fff2;
+    box-shadow:
+      32px 0 #fff2,
+      -32px 0 #2196f3;
+  }
+  50% {
+    background-color: #2196f3;
+    box-shadow:
+      32px 0 #fff2,
+      -32px 0 #fff2;
+  }
+  100% {
+    background-color: #fff2;
+    box-shadow:
+      32px 0 #2196f3,
+      -32px 0 #fff2;
+  }
+}

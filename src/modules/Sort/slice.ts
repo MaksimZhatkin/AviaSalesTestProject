@@ -1,12 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface SortState {
-  sort: 'cheapest' | 'fastest' | 'optimal';
-}
+import { SortState } from '../types';
 
 const initialState: SortState = {
-  sort: 'cheapest',
+  sortValue: 'cheapest',
 };
 
 const sortSlice = createSlice({
@@ -14,7 +12,7 @@ const sortSlice = createSlice({
   initialState,
   reducers: {
     setSort(state, action: PayloadAction<'cheapest' | 'fastest' | 'optimal'>) {
-      state.sort = action.payload;
+      state.sortValue = action.payload;
     },
   },
 });

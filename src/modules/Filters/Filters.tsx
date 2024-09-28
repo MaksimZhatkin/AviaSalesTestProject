@@ -1,15 +1,14 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { toggleAll, toggleFilter } from '../../store/filtersSlice';
 import { RootState, AppDispatch } from '../../store/store'; // Import types from the store
 
-import * as css from './Aside.module.css';
+import { toggleAll, toggleFilter } from './slice';
+import * as css from './styles.module.css';
 
-export default function Aside() {
-  const dispatch: AppDispatch = useDispatch();
-
-  const filters = useSelector((state: RootState) => state.filters.filters);
+export default function filters() {
+  const dispatch = useDispatch<AppDispatch>();
+  const filtersData = useSelector((state: RootState) => state.filters) ?? {};
 
   const handleToggleAll = () => {
     dispatch(toggleAll());
@@ -20,38 +19,38 @@ export default function Aside() {
   };
 
   return (
-    <aside className={css.aside}>
-      <h3 className={css.aside_title}>Количество пересадок</h3>
-      <ul className={css.aside_list}>
+    <aside className={css.filters}>
+      <h3 className={css.filters_title}>Количество пересадок</h3>
+      <ul className={css.filters_list}>
         <li>
-          <label className={css.aside_item}>
+          <label className={css.filters_item}>
             <input
-              className={css.aside_checkbox}
+              className={css.filters_checkbox}
               type="checkbox"
-              checked={filters.all.value}
+              checked={filtersData.all?.value ?? false}
               onChange={handleToggleAll}
             />
-            <span className={css.aside_custom_chbox} />
-            {filters.all.title}
+            <span className={css.filters_custom_chbox} />
+            {filtersData.all?.title ?? ''}
           </label>
         </li>
-        {Object.entries(filters).map(
-          ([filterName, { value, title }]: any) =>
+        {Object.entries(filtersData).map(
+          ([filterName, { value, title }]) =>
             filterName !== 'all' && (
               <li key={filterName}>
-                <label className={css.aside_item}>
+                <label className={css.filters_item}>
                   <input
-                    className={css.aside_checkbox}
+                    className={css.filters_checkbox}
                     type="checkbox"
-                    checked={value}
+                    checked={value ?? false}
                     onChange={() =>
                       handleToggleFilter(
                         filterName as 'noTransfers' | 'oneTransfer' | 'twoTransfers' | 'threeTransfers'
                       )
                     }
                   />
-                  <span className={css.aside_custom_chbox} />
-                  {title}
+                  <span className={css.filters_custom_chbox} />
+                  {title ?? ''}
                 </label>
               </li>
             )

@@ -1,0 +1,21 @@
+.tickets_list {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tickets_list_item {
+  margin: 0;
+  padding: 0;
+}
+
+.tickets_message {
+  text-transform: none;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  color: #fb6565;
+}

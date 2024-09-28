@@ -20,6 +20,7 @@ export default (env) => {
 
   return {
     // Configuration
+    stats: 'errors-warnings',
     mode: env.mode ?? 'development',
     devtool: isDev ? 'eval' : 'source-map',
     entry: './src/index.tsx',

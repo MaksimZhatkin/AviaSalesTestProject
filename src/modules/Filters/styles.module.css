@@ -1,13 +1,13 @@
-.aside {
+.filters {
   padding: 20px 0 13px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-  grid-area: aside;
+  grid-area: filters;
   align-self: start;
 }
 
-.aside_title {
+.filters_title {
   font-size: 12px;
   font-weight: bold;
   padding: 0 20px;
@@ -15,7 +15,7 @@
   margin-block-end: 13px;
 }
 
-.aside_list {
+.filters_list {
   text-transform: none;
   font-size: 12px;
   font-weight: normal;
@@ -24,7 +24,7 @@
   padding: 0;
 }
 
-.aside_item {
+.filters_item {
   display: block;
   line-height: 20px;
   padding: 10px 0 10px 50px;
@@ -33,21 +33,21 @@
   user-select: none;
 }
 
-.aside_item:hover {
+.filters_item:hover {
   background-color: #f1fcff;
 }
 
-.aside_item:active {
+.filters_item:active {
   background-color: #2196f3;
   color: #ffffff;
 }
 
-.aside_checkbox {
+.filters_checkbox {
   appearance: none;
   position: absolute;
 }
 
-.aside_custom_chbox {
+.filters_custom_chbox {
   position: absolute;
   font-size: 0;
   width: 20px;
@@ -59,7 +59,7 @@
   background: #ffffff no-repeat center;
 }
 
-.aside_checkbox:checked + .aside_custom_chbox {
+.filters_checkbox:checked + .filters_custom_chbox {
   border: 1px solid #2196f3;
 
   background:
@@ -68,6 +68,6 @@
     #ffffff;
 }
 
-.aside_checkbox:focus + .aside_custom_chbox {
+.filters_checkbox:focus + .filters_custom_chbox {
   outline: 2px solid #007bff;
 }
